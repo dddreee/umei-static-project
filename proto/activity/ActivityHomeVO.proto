@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+
+message ActivityHomeVOProto {
+
+    int64 id = 1;
+
+    string title = 2;
+
+    repeated FileInfo img = 3;
+
+    string url = 4;
+
+}

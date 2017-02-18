@@ -1,0 +1,194 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'FZPSHSMGB5c8586f8515f2c';
+  src: url("//cdn.webfont.youziku.com/webfonts/nomal/89900/47271/57d7daebf629d80a14a4ae69.gif");
+  src: url("//cdn.webfont.youziku.com/webfonts/nomal/89900/47271/57d7daebf629d80a14a4ae69.gif?#iefix") format("embedded-opentype"), url("//cdn.webfont.youziku.com/webfonts/nomal/89900/47271/57d7daebf629d80a14a4ae69.bmp") format("woff"), url("//cdn.webfont.youziku.com/webfonts/nomal/89900/47271/57d7daebf629d80a14a4ae69.jpg") format("truetype"), url("//cdn.webfont.youziku.com/webfonts/nomal/89900/47271/57d7daebf629d80a14a4ae69.png#FZPSHSMGB") format("svg"); }
+.css5c8586f8515f2c {
+  font-family: 'FZPSHSMGB5c8586f8515f2c'; }
+
+body {
+  background: #01d5b6;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden; }
+  body .swiper-container {
+    height: 100%; }
+  body .post_head .title {
+    color: #01d5b6;
+    font-size: 0.17rem;
+    display: inline-block;
+    padding: 0.1rem 0.13rem 0.1rem 0.39rem;
+    background: #fff;
+    margin-top: 0.33rem;
+    position: relative;
+    border-radius: 0.38rem; }
+    body .post_head .title span {
+      position: relative;
+      z-index: 3; }
+  body .post_head .page_num {
+    font-size: 0.35rem;
+    position: absolute;
+    left: 0.08rem;
+    bottom: 0.02rem;
+    z-index: 2; }
+  body .post_head .page_num_bg {
+    width: 0.55rem;
+    height: 0.55rem;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    left: -0.1rem;
+    bottom: 0;
+    z-index: 1; }
+  body .post_body {
+    margin-top: 0.27rem;
+    color: #fff;
+    font-size: 0.15rem;
+    font-family: 'FZPSHSMGB5c8586f8515f2c'; }
+    body .post_body p {
+      line-height: 0.22rem; }
+    body .post_body .post_content_line {
+      line-height: 0.22rem; }
+      body .post_body .post_content_line div {
+        display: inline-block;
+        vertical-align: middle; }
+      body .post_body .post_content_line .line {
+        width: 0.95rem;
+        height: 1px;
+        background: #fff; }
+      body .post_body .post_content_line .circle {
+        width: 0.05rem;
+        height: 0.05rem;
+        border-radius: 50%;
+        background: #fff;
+        margin: 0 0.04rem; }
+  body .post_foot_circle {
+    font-family: 'FZPSHSMGB5c8586f8515f2c';
+    position: absolute;
+    background: -webkit-linear-gradient(#FEE990, #FBC010);
+    /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#FEE990, #FBC010);
+    /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#FEE990, #FBC010);
+    /* Firefox 3.6 - 15 */
+    background: linear-gradient(#FEE990, #FBC010);
+    /* 标准的语法 */
+    box-shadow: 0 1px 2px #a98a2e;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 0.15rem; }
+  body .circle_content {
+    width: 1.64rem;
+    height: 1.64rem;
+    z-index: 3;
+    left: 50%;
+    top: 0.48rem;
+    color: #fff; }
+    body .circle_content .circle_content_inline {
+      display: inline-block;
+      margin-top: 0.25rem; }
+      body .circle_content .circle_content_inline p {
+        line-height: 0.22rem; }
+    body .circle_content .second_circle_content_inline {
+      margin-top: 0.38rem; }
+  body .post_foot {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 0.25rem;
+    text-align: left; }
+    body .post_foot .post_foot_img {
+      width: 2.31rem;
+      position: relative;
+      z-index: 2; }
+    body .post_foot .post_foot_circle_1 {
+      width: 0.38rem;
+      height: 0.38rem;
+      z-index: 2;
+      left: 2.75rem;
+      top: 2.1rem; }
+    body .post_foot .post_foot_circle_2 {
+      left: 2.45rem;
+      width: 0.23rem;
+      height: 0.23rem;
+      z-index: 1;
+      top: 2.5rem; }
+
+.slide_btn {
+  position: fixed;
+  bottom: 0.13rem;
+  right: 0.13rem;
+  z-index: 99;
+  color: #00AA8F;
+  background: rgba(255, 255, 255, 0.81);
+  padding: 0.025rem 0.17rem;
+  border-radius: 0.23rem;
+  font-size: 0.14rem; }
+  .slide_btn img {
+    width: 0.07rem;
+    vertical-align: baseline; }
+
+.end .post_body {
+  margin-top: 0.48rem; }
+.end .qr_code {
+  width: 1.55rem;
+  margin-top: 0.09rem; }
+.end .download {
+  margin-top: 0.8rem;
+  display: inline-block;
+  position: relative; }
+  .end .download .download_btn {
+    font-family: 'FZPSHSMGB5c8586f8515f2c';
+    display: block;
+    background: -webkit-linear-gradient(#FEE990, #FBC010);
+    /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#FEE990, #FBC010);
+    /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#FEE990, #FBC010);
+    /* Firefox 3.6 - 15 */
+    background: linear-gradient(#FEE990, #FBC010);
+    /* 标准的语法 */
+    box-shadow: 0 1px 2px #a98a2e;
+    color: #fff;
+    font-size: .2rem;
+    padding: 0.1rem 0.19rem;
+    border-radius: 0.45rem; }
+  .end .download .end_post_circle_1 {
+    width: 0.09rem;
+    height: 0.09rem;
+    top: -0.18rem;
+    right: 0.16rem; }
+  .end .download .end_post_circle_2 {
+    width: 0.18rem;
+    height: 0.18rem;
+    top: -0.18rem;
+    right: -0.06rem; }
+  .end .download .end_post_circle_3 {
+    width: 0.11rem;
+    height: 0.11rem;
+    top: 0.06rem;
+    right: -0.18rem; }
+  .end .download .end_post_circle_4 {
+    width: 0.09rem;
+    height: 0.09rem;
+    top: 0.42rem;
+    left: -0.12rem; }
+.end .phone {
+  font-family: 'FZPSHSMGB5c8586f8515f2c';
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0.25rem;
+  color: #fff;
+  font-size: 0.15rem; }
+
+@media screen and (max-height: 481px) {
+  body .post_foot {
+    bottom: -0.75rem; } }
+
+/*# sourceMappingURL=index.css.map */

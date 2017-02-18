@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="test">
+    <my-component :prop="prop"></my-component>
+    <input type="color" v-model="color" @change="editContent('ForeColor', true, color)">
+    <button @click="editContent('bold', true, null)">加粗</button>
+    <button @click="closeEdit">完成</button>
+
+    <div id="content" style="height: 200px; width: 500px; border: 1px solid red" :contenteditable="editable" @dblclick="changeEditStatus($event)">
+        <h1>测试</h1>
+    </div>
+</div>
+
+<script src="../../js/public/vue.min.js"></script>
+<script>
+    var myComponent = Vue.extend({
+        props: ['prop'],
+        template: '<p>{{ prop }}</p>'
+    });
+
+    var vm = new Vue({
+        el: '#test',
+        data: {
+            color: '',
+            editable: false,
+            prop: '这是测试ready后获取html代码是否是编译过的代码'
+        },
+        components: {
+            'my-component': myComponent
+        },
+        ready: function(){
+            console.log(document.getElementById('test').innerHTML)
+        },
+        methods: {
+            editContent: function(role, boolean, value){
+                typeof value == "undefined" ? value = null : value = value;
+                document.execCommand(role, boolean, value)
+            },
+            changeEditStatus: function(e){
+                this.editable = true;
+                e.target.focus();
+            },
+            closeEdit: function(){
+                this.editable = false;
+            }
+        }
+    })
+</script>
+</body>
+</html>

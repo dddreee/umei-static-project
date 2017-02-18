@@ -1,0 +1,231 @@
+input {
+  outline: 0;
+  padding: 0;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.hidden {
+  display: none;
+}
+.blur {
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -o-filter: blur(3px);
+  -ms-filter: blur(3px);
+  filter: blur(3px);
+}
+#spinner-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(51, 51, 51, 0.49);
+  left: 0;
+  z-index: 99;
+}
+#spinner-container .spinner-bg {
+  background: #ffffff;
+  width: 72%;
+  height: 30%;
+  border-radius: 1rem;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  margin: auto;
+  text-align: center;
+}
+#spinner-container span {
+  display: block;
+  width: 3.1rem;
+  height: 3.1rem;
+  background: url("../../images/common/logo-circle-no-txt-115.png") no-repeat;
+  background-size: 3.1rem;
+  margin: 1.55rem auto 0.88rem auto;
+}
+#spinner-container label {
+  display: block;
+}
+.spinner:before,
+.spinner:after,
+.spinner {
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation: load7 1.8s infinite ease-in-out;
+  animation: load7 1.8s infinite ease-in-out;
+}
+.spinner {
+  color: #01d5b6;
+  font-size: 0.25rem;
+  margin: auto;
+  position: relative;
+  text-indent: -9999em;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+.spinner:before {
+  left: -3.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.spinner:after {
+  left: 3.5em;
+}
+.spinner:before,
+.spinner:after {
+  content: '';
+  position: absolute;
+  top: 0;
+}
+@-webkit-keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
+}
+@keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
+}
+.artisans {
+  width: 100%;
+  padding-left: 0.27rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0.5rem;
+}
+.artisans .artisan {
+  width: 3.45rem;
+  display: inline-block;
+  padding-left: 0.7rem;
+}
+.artisans .artisan .artisan-pic {
+  height: 3.45rem;
+  border-radius: 3.45rem;
+  position: relative;
+}
+.artisans .artisan .artisan-pic img {
+  width: 100%;
+  height: 100%;
+  border-radius: 3.45rem;
+}
+.artisans .artisan .artisan-nickname {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  font-size: 0.8rem;
+}
+.artisan-level {
+  height: 0.58rem;
+  position: relative;
+  display: inline-block;
+}
+.artisan-level div {
+  height: 100%;
+}
+.artisan-level .lv2-0 {
+  background: url('../../images/common/ico-lv-gold-0.png') no-repeat;
+  width: 0.53rem;
+  background-size: 100% 100%;
+  margin-left: 1.46rem;
+}
+.artisan-level .lv2-1 {
+  background: url('../../images/common/ico-lv-gold-1.png') no-repeat;
+  width: 1.06rem;
+  background-size: 100% 100%;
+  margin-left: 1.195rem;
+}
+.artisan-level .lv2-2 {
+  background: url('../../images/common/ico-lv-gold-2.png') no-repeat;
+  width: 1.59rem;
+  background-size: 100% 100%;
+  margin-left: 0.93rem;
+}
+.artisan-level .lv2-3 {
+  background: url('../../images/common/ico-lv-gold-3.png') no-repeat;
+  width: 2.12rem;
+  background-size: 100% 100%;
+  margin-left: 0.665rem;
+}
+.artisan-level .lv2-4 {
+  background: url('../../images/common/ico-lv-gold-4.png') no-repeat;
+  width: 2.6500000000000004rem;
+  background-size: 100% 100%;
+  margin-left: 0.3999999999999999rem;
+}
+.artisan-level .lv1-0 {
+  background: url('../../images/common/ico-lv-silver-0.png') no-repeat;
+  width: 0.53rem;
+  background-size: 100% 100%;
+  margin-left: 1.46rem;
+}
+.artisan-level .lv1-1 {
+  background: url('../../images/common/ico-lv-silver-1.png') no-repeat;
+  width: 1.06rem;
+  background-size: 100% 100%;
+  margin-left: 1.195rem;
+}
+.artisan-level .lv1-2 {
+  background: url('../../images/common/ico-lv-silver-2.png') no-repeat;
+  width: 1.59rem;
+  background-size: 100% 100%;
+  margin-left: 0.93rem;
+}
+.artisan-level .lv1-3 {
+  background: url('../../images/common/ico-lv-silver-3.png') no-repeat;
+  width: 2.12rem;
+  background-size: 100% 100%;
+  margin-left: 0.665rem;
+}
+.artisan-level .lv1-4 {
+  background: url('../../images/common/ico-lv-silver-4.png') no-repeat;
+  width: 2.6500000000000004rem;
+  background-size: 100% 100%;
+  margin-left: 0.3999999999999999rem;
+}
+.artisan-level .lv0-0 {
+  background: url('../../images/common/ico-lv-copper-0.png') no-repeat;
+  width: 0.53rem;
+  background-size: 100% 100%;
+  margin-left: 1.46rem;
+}
+.artisan-level .lv0-1 {
+  background: url('../../images/common/ico-lv-copper-1.png') no-repeat;
+  width: 1.06rem;
+  background-size: 100% 100%;
+  margin-left: 1.195rem;
+}
+.artisan-level .lv0-2 {
+  background: url('../../images/common/ico-lv-copper-2.png') no-repeat;
+  width: 1.59rem;
+  background-size: 100% 100%;
+  margin-left: 0.93rem;
+}
+.artisan-level .lv0-3 {
+  background: url('../../images/common/ico-lv-copper-3.png') no-repeat;
+  width: 2.12rem;
+  background-size: 100% 100%;
+  margin-left: 0.665rem;
+}
+.artisan-level .lv0-4 {
+  background: url('../../images/common/ico-lv-copper-4.png') no-repeat;
+  width: 2.6500000000000004rem;
+  background-size: 100% 100%;
+  margin-left: 0.3999999999999999rem;
+}

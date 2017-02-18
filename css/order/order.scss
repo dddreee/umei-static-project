@@ -1,0 +1,482 @@
+@import "../common/style";
+.break{
+  padding: 0.16rem;
+  font-size: 0.15rem;
+  visibility: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.nav{
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  font-size: 0.15rem;
+  color: #bdbdbd;
+  left: 0;
+  top: 0;
+  background: #fff;
+  .nav_item{
+    width: 50%;
+    display: inline-block;
+    padding: 0.16rem 0;
+
+  }
+  .nav_item_active{
+    color: $base_color;
+    position: relative;
+  }
+  .nav_item_active:after{
+    position: absolute;
+    display: block;
+    content: '';
+    width: 1rem;
+    height: 1px;
+    background: $base_color;
+    bottom: 0;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+  }
+}
+.nav:after{
+  position: absolute;
+  left: 50%;
+  content: '';
+  width: 1px;
+  height: 0.33rem;
+  display: block;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #979797;
+}
+.container{
+  width: 100%;
+  overflow: hidden;
+  //white-space: nowrap;
+  .wrap{
+    width: 200%;
+    position: relative;
+    //transform: translate(-50%,0);
+    -webkit-transition: transform .3s linear ;
+    -moz-transition: transform .3s linear ;
+    -ms-transition: transform .3s linear ;
+    -o-transition: transform .3s linear ;
+    transition: transform .3s linear ;
+  }
+  .wrap_move{
+    transform: translate(-50%,0);
+  }
+  .order, .mine{
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+    //position: relative;
+  }
+  .artisan_info{
+    width: 100%;
+    padding: 0.16rem 0.1rem 0.12rem 0.12rem;
+    box-sizing: border-box;
+    background: -webkit-linear-gradient(#02ECDC, $base_color);
+    background: linear-gradient(#02ECDC, $base_color);
+  }
+
+  .artisan{
+    text-align: left;
+    .avatar{
+      display: inline-block;
+      width: 0.75rem;
+      height: 0.75rem;
+      vertical-align: middle;
+      border-radius: 50%;
+    }
+    .base_info{
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 0.16rem;
+      .artisan_name{
+        display: inline-block;
+        font-size: 0.2rem;
+        vertical-align: middle;
+        color: #fff;
+      }
+      .artisan_level{
+        vertical-align: middle;
+        div{
+          height: 0.24rem;
+          width: 0.64rem;
+        }
+      }
+
+      .work_year{
+        display: inline-block;
+        color: #fff;
+        font-size: 0.13rem;
+      }
+      .work_type{
+        display: inline-block;
+        color: $base_color;
+        padding: 0.01rem 0.1rem;
+        border-radius: 0.2rem;
+        background: #fff;
+        font-size: 0.13rem;
+      }
+
+    }
+
+  }
+
+  .other_info{
+    margin-top: 0.1rem;
+    color: #fff;
+    font-size: 0.11rem;
+    text-align: left;
+    position: relative;
+
+    .order_count{
+      display: inline-block;
+      padding-left: 0.14rem;
+      background: url("../../images/order/icon_order.png") no-repeat left center/contain;
+    }
+    .service_circle{
+      position: absolute;
+      padding-left: 0.12rem;
+      top: 0;
+      right: 0;
+      z-index: 10;
+      //padding-left: 0.12rem;
+      background: url("../../images/order/icon_map.png") no-repeat left center/contain;
+    }
+  }
+
+  .shop{
+    //display: block;
+    margin: 0.1rem 0;
+    padding: 0 0.15rem;
+
+    .shop_container{
+      display: block;
+      width: 100%;
+      height: 1.74rem;
+      border-radius: 0.04rem;
+      position: relative;
+      overflow: hidden;
+
+    }
+
+    .shop_container:before{
+      content: '门店';
+      display: block;
+      position: absolute;
+      z-index: 10;
+      left: 0;
+      top: 0.1rem;
+      padding: 0.03rem 0.1rem;
+      background: $base_color;
+      color: #fff;
+      border-radius: 0 0.2rem 0.2rem 0;
+    }
+
+    .shop_info{
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      box-sizing: border-box;
+      z-index: 10;
+      text-align: left;
+      color: #fff;
+      padding: 0.2rem 0.17rem 0.14rem 0.17rem;
+      background: -webkit-linear-gradient(transparent, #000);
+      background: linear-gradient(transparent, #000);
+    }
+    .shop_name{
+      font-size: 0.15rem;
+    }
+    .shop_address{
+      font-size: 0.13rem;
+      margin-top: 0.05rem;
+    }
+  }
+
+  .pre_order{
+    background: #fff;
+    .title{
+      font-size: 0.15rem;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0.1rem 0.15rem;
+      text-align: left;
+    }
+    .week{
+      display: flex;
+      display: -webkit-flex;
+      flex-direction: row;
+      -webkit-flex-direction: row;
+      padding: 0.1rem 0;
+      font-size: 0.13rem;
+      color: #999;
+      border-top: 1px solid #d7d7d7;
+
+      .weekday{
+        flex: 1;
+        -webkit-flex: 1;
+      }
+    }
+
+    .schedule{
+      .dates{
+        display: flex;
+        display: -webkit-flex;
+        flex-direction: row;
+        -webkit-flex-direction: row;
+
+        font-size: 0.15rem;
+        border-top: 1px solid #d7d7d7;
+        //border-bottom: 1px solid #d7d7d7;
+        color: #333;
+        .date{
+          flex: 1;
+          -webkit-flex: 1;
+          padding: 0.16rem 0 0.12rem 0;
+        }
+        .active_date{
+          background: #fff url("../../images/order/icon_active_date_bg.png") no-repeat center bottom / 0.38rem;
+          color: #fff;
+        }
+      }
+      .schedule_list{
+        text-align: left;
+        .schedule_item{
+          display: inline-block;
+          width: 20%;
+          text-align: center;
+          padding: 0.14rem 0;
+          position: relative;
+          color: #fff;
+          //background: #666;
+        }
+        .schedule_item:before{
+          content: attr(time);
+          display: block;
+          position: relative;
+          z-index: 100;
+          font-size: 0.15rem;
+          //display: block;
+        }
+        .schedule_item:after{
+          content: attr(status);
+          position: relative;
+          z-index: 100;
+          margin-top: 0.03rem;
+          font-size: 0.13rem;
+        }
+
+
+        .schedule_radio{
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          z-index: 10;
+          left: 0;
+          top: 0;
+          background: #666;
+        }
+        .schedule_radio:before{
+          position: absolute;
+          width: 1px;
+          right: 0;
+          top: 0;
+          height: 100%;
+          background: #f3f3f3;
+          content: '';
+        }
+        .schedule_radio:after{
+          position: absolute;
+          content: '';
+          width: 100%;
+          right: 0;
+          bottom: 0;
+          height: 1px;
+          background: #f3f3f3;
+        }
+        .schedule_radio:checked{
+          background: $base_color;
+        }
+        .schedule_radio:disabled{
+          background: #d7d7d7;
+        }
+      }
+
+      .face_to_face{
+        display: block;
+        border-bottom: 1px solid #d7d7d7;
+        border-top: 1px solid #d7d7d7;
+        position: relative;
+        font-size: 0.15rem;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0.12rem 0.1rem;
+        text-align: right;
+        color: #333;
+        margin-top: -1px;
+        .face_to_face_schedule_radio{
+          position: absolute;
+          width: 0.2rem;
+          height: 0.2rem;
+          left: 0.1rem;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          z-index: 10;
+          border-radius: 50%;
+          border: 1px solid #d7d7d7;
+
+        }
+        .face_to_face_schedule_radio:checked{
+          //border-color: $base_color;
+          background: $base_color url("../../images/order/icon_check.png") no-repeat center/contain;
+          border-color: $base_color;
+        }
+
+      }
+    }
+
+    .tip{
+      box-sizing: border-box;
+      padding: 0.1rem 0.1rem 0.22rem 0.1rem;
+      font-size: 0.11rem;
+      color: #999;
+      background: #f8f8f8;
+    }
+    .dynamic{
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0 0.1rem;
+      //background: #fff;
+      text-align: left;
+
+      .dynamic_title{
+        font-size: 0.15rem;
+        color: #333;
+        padding: 0.12rem 0 0.1rem 0;
+        position: relative;
+      }
+
+      .styles{
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        z-index: 1;
+        height: 0.12rem;
+        font-size: 0.12rem;
+
+      }
+
+      .dynamic_images{
+        .dynamic_image{
+          width: 20%;
+          height: 0.7rem;
+          display: inline-block;
+
+        }
+      }
+
+      .dynamic_intro{
+        padding: 0.1rem 0;
+        border-top: 1px solid #d7d7d7;
+        font-size: 0.15rem;
+        color: #999;
+      }
+    }
+  }
+
+  .mine{
+    .mine_info{
+      padding: 0.18rem 0 0.1rem 0;
+      background: -webkit-linear-gradient(#02ECDC, $base_color);
+      background: linear-gradient(#02ECDC, $base_color);
+
+      .mine_avatar{
+        width: 0.75rem;
+        height: 0.75rem;
+        margin: 0 auto;
+        border-radius: 50%;
+        background: #fff;
+      }
+      .mine_name{
+        color: #fff;
+        font-size: 0.2rem;
+      }
+    }
+
+    .base_nav{
+      margin-top: 0.15rem;
+      background: #fff;
+      padding: 0 0.1rem;
+      border-top: 1px solid #d7d7d7;
+      //border-bottom: 1px solid #d7d7d7;
+      box-sizing: border-box;
+      position: relative;
+      font-size: 0.15rem;
+      .base_nav_item{
+        text-align: left;
+        padding: 0.14rem 0;
+        position: relative;
+        display: block;
+        box-sizing: border-box;
+        border-bottom: 1px solid #d7d7d7;
+        background: url("../../images/order/icon_arrow.png") no-repeat right center / 0.09rem auto;
+      }
+    }
+    .base_nav:after{
+      content: '';
+      position: absolute;
+      width: 100%;
+      border-bottom: 1px solid #d7d7d7;
+      right: 0;
+      bottom: 0;
+      z-index: 10;
+    }
+  }
+}
+
+.bar{
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+  background: #fff;
+  padding: 0.12rem 0.1rem;
+  box-sizing: border-box;
+  font-size: 0.13rem;
+  color: $base_color;
+  text-align: left;
+  box-shadow: 0 -1px 9px 1px rgba(171,171,171,0.21);
+
+  .pre_order_date{
+    font-size: 0.14rem;
+    height: 0.14rem;
+  }
+  .pre_order_btn{
+    position: absolute;
+    right: 0.1rem;
+    font-size: 0.18rem;
+    padding: 0.13rem 0.44rem;
+    background: $base_color;
+    color: #fff;
+    z-index: 100;
+    border-radius: 0.5rem;
+    top: 0.04rem;
+  }
+  .pre_order_btn:disabled{
+    background: #ccc;
+  }
+}

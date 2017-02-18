@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,initial-scale=1,maximum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+
+    <link rel="stylesheet" type="text/css" href="../../css/common/swiper-3.3.1.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/shop_activity/index.css">
+    <title>约美活动</title>
+</head>
+<body>
+
+<div id="app">
+    <div class="swiper-container swiper-container-v" :class="colorMap[activityInfo.pageColor]">
+        <div class="swiper-wrapper">
+            <!-- A模板-->
+            <!--<div class="swiper-slide temp_a">
+                <div class="figure">
+                    <div class="next_btn"></div>
+                    <div class="temp_a_swiper swiper-container swiper-container-h">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" style=" background: url(../../images/shop_activity/temp_a/temp_a_orange_rectangle.png) no-repeat top center/cover"></div>
+                            <div class="swiper-slide" style=" background: url(../../images/shop_activity/temp_a/temp_a_orange_rectangle.png) no-repeat top center/cover"></div>
+                            <div class="swiper-slide" style="background: url(../../images/shop_activity/temp_a/temp_a_orange_rectangle.png) no-repeat top center/cover"></div>
+                        </div>
+                    </div>
+                    <div class="prev_btn"></div>
+                </div>
+                <div class="temp_a_divide">
+                    <img src="../../images/shop_activity/temp_a/temp_a_orange_rectangle.png" width="100%">
+                </div>
+
+                <div class="main_content">
+                    <div class="content_title font_grey">123</div>
+                    <p class="content">
+                        按时发嘎嘎该发生的福冈挨个发顺丰的噶挨个发生的噶发售噶干嘎嘎是否阿纲
+                    </p>
+                    <p class="divide divide_white">
+                        <img src="../../images/shop_activity/temp_a/temp_a_divide_white.png" width="100%">
+                    </p>
+                    <p class="content center">
+                        按时给法师噶啥打算发售噶三国杀的高考可骄傲和伺服哈时间不够iu噶啥开发Hi好暗示法老克就哈市脚后跟
+                    </p>
+                </div>
+            </div>-->
+
+
+            <!-- B-->
+            <!--<div class="swiper-slide temp_b">
+                <div class="title_box">
+                    <div class="shop_name">发生的高分爱傻傻的</div>
+                </div>
+                <div class="content_box content_box_0">
+                    <div class="content left">则噶啥按时发噶是大概时候杀掉我我哈斯卡浩丰科技和</div>
+                </div>
+                <div class="figure">
+                    <img class="temp_b_img temp_b_img_0" src="../../images/shop_activity/temp_b/temp_b_img.png" >
+                    <img class="temp_b_img temp_b_img_1" src="../../images/shop_activity/temp_b/temp_b_img.png" >
+                    <img class="temp_b_img temp_b_img_2" src="../../images/shop_activity/temp_b/temp_b_img.png" >
+                </div>
+                <div class="content_box content_box_1">
+                    <div class="content">按时发生大发适当发生大噶算法</div>
+                </div>
+
+
+            </div>-->
+            <!-- C-->
+            <!--<div class="swiper-slide temp_c">
+                <div class="shop_name">这个就按四个</div>
+                <div class="shop_address">长宁区定西路727号4A-2</div>
+                <div class="figure">
+                    <div class="swiper-container temp_c_swiper">
+                        <div class="swiper-wrapper temp_c_wrapper">
+                            <div class="swiper-slide temp_c_slide"></div>
+                            <div class="swiper-slide temp_c_slide"></div>
+                            <div class="swiper-slide temp_c_slide"></div>
+                        </div>
+                    </div>
+                    &lt;!&ndash;<div class="prev_btn"></div>&ndash;&gt;
+                    <div class="next_btn"></div>
+                </div>
+                <div class="content">
+                    asfasfasdasfa
+                </div>
+            </div>-->
+
+            <!-- D-->
+            <!--<div class="swiper-slide temp_d" style="">
+                <div class="content_box">
+                    <div class="temp_d_content_line"></div>
+                    <div class="temp_d_tag">Umei Me Luxure Barber Shop</div>
+                    <div class="shop_name">约来约美旗舰店</div>
+                    <div class="temp_d_content_line"></div>
+                    <div class="shop_address"></div>
+                    <div class="temp_d_tag temp_d_tag_last">时尚 定制 轻奢 优雅 享受</div>
+                </div>
+                <div class="gradient"></div>
+                <div class="temp_d_bg_line temp_d_bg_line_1"></div>
+                <div class="temp_d_bg_line temp_d_bg_line_2"></div>
+                <div class="temp_d_bg_line temp_d_bg_line_3"></div>
+                <div class="temp_d_bg_line temp_d_bg_line_4"></div>
+                <div class="temp_d_bg_line temp_d_bg_line_5"></div>
+                <div class="temp_d_bg_line temp_d_bg_line_6"></div>
+                <div class="temp_d_bg_line temp_d_bg_line_7"></div>
+            </div>-->
+
+            <!-- E-->
+            <!--<div class="swiper-slide temp_e">
+                <div class="swiper-container temp_e_swiper">
+                    <div class="prev_btn"></div>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"></div>
+                    </div>
+                    <div class="next_btn"></div>
+
+                    <div class="gradient"></div>
+
+                </div>
+                <div class="content_box">
+                    <div class="content_title">约来约美体验中心</div>
+                    <p class="content">这是一段content</p>
+                    <p class="content">这是一段content</p>
+                </div>
+
+            </div>-->
+            <div v-for="page in activityInfo.pages" :is="templateMap[page.templateId]" :name="activityInfo.shopName" :address="activityInfo.shopAddress" :page="page" :color-style="colorMap[activityInfo.pageColor]"></div>
+
+            <div class="swiper-slide discount">
+                <div class="discount_content">
+                    <div class="form">
+                        <input class="phone_input" type="number" pattern="[0-9]" placeholder="请输入手机号码">
+                        <div class="form-group">
+                            <input class="phone_code" type="text" placeholder="请输入验证码">
+                            <button class="get_code" disabled>获取验证码</button>
+                        </div>
+
+
+                        <button type="button" class="get_discount">领取优惠券</button>
+                    </div>
+                    <div class="success">
+                        <ul class="ticket_list">
+                            <li class="ticket_item"></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bar"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../../js/public/zepto.min.js"></script>
+<script src="../../js/public/swiper-3.3.1.jquery.min.js"></script>
+<script src="../../js/public/vue.min.js"></script>
+<script src="../../js/shop_activity/index.js"></script>
+</body>
+</html>

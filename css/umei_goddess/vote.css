@@ -1,0 +1,111 @@
+.mask {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 100%;
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
+  background: transparent;
+  z-index: 99;
+  -webkit-transition: background 0.5s ease;
+  -moz-transition: background 0.5s ease;
+  -ms-transition: background 0.5s ease;
+  -o-transition: background 0.5s ease;
+  transition: background 0.5s ease; }
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 10px, 0);
+    -ms-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none; } }
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp; }
+
+body {
+  background: url("../../images/umei_goddess/bg.png") repeat top center/100% auto; }
+
+.goddess {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 0.24rem; }
+  .goddess .goddess_list {
+    padding: 0.15rem 0;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left; }
+    .goddess .goddess_list .goddess_item {
+      padding: 0 0.15rem;
+      margin-top: 0.15rem;
+      width: 50%;
+      display: inline-block;
+      box-sizing: border-box;
+      position: relative;
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both; }
+
+.goddess_item_content {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+  overflow: hidden;
+  background: #fff;
+  text-align: center; }
+  .goddess_item_content .goddess_avatar {
+    height: 1.24rem;
+    overflow: hidden; }
+  .goddess_item_content .goddess_info {
+    padding: 0.05rem 0.05rem 0.1rem 0.05rem;
+    text-align: left;
+    position: relative; }
+    .goddess_item_content .goddess_info .goddess_name {
+      font-size: 0.15rem;
+      line-height: 0.18rem; }
+    .goddess_item_content .goddess_info .goddess_vote {
+      color: #01d5b6;
+      font-size: 0.12rem;
+      line-height: 0.14rem;
+      margin-top: 0.05rem; }
+    .goddess_item_content .goddess_info .sort {
+      position: absolute;
+      z-index: 1;
+      right: 0.1rem;
+      top: 0.06rem;
+      min-width: 0.48rem;
+      text-align: center; }
+    .goddess_item_content .goddess_info .vote_btn {
+      position: absolute;
+      right: 0.1rem;
+      bottom: 0.08rem;
+      z-index: 1;
+      display: block;
+      width: 0.48rem;
+      height: 0.2rem;
+      line-height: 0.18rem;
+      font-size: 0.14rem;
+      color: #fff;
+      background: url("../../images/umei_goddess/btn_bg_small.png") no-repeat center/100% 100%; }
+
+.show {
+  background: rgba(0, 0, 0, 0.6);
+  left: 0; }
+
+/*# sourceMappingURL=vote.css.map */

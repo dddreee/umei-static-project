@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,initial-scale=1,maximum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <title>预约</title>
+    <!--<link rel="stylesheet" type="text/css" href="../../css/common/style.css" />-->
+    <link rel="stylesheet" type="text/css" href="../../css/order/order.css">
+    <!--<script></script>-->
+</head>
+<style>
+
+</style>
+<body>
+<div id="app">
+    <my-nav :switch="switch"></my-nav>
+    <!--<div class="nav">
+        <div class="nav_item nav_item_active">发型师</div><div class="nav_item">我的</div>
+    </div>-->
+    <div class="break">1</div>
+    <div class="container">
+        <div class="wrap" :class="{'wrap_move': switch.bool}">
+            <div class="bar"><div>预约时间</div><div class="pre_order_date" :style="{visible: (activeTime ? 'visible': 'hidden')}" v-text="pre_order_date"></div><button class="pre_order_btn" :disabled="activeTime == ''" @click="orderHandler">立即预约</button></div>
+            <order :artisan_info="artisan_info" :week="week" :schedule_list="scheduleList" :active_date="activeDate" :change_date_handler="changeActiveDateHandler" :change_time="changeActiveTime"></order><div class="mine">
+            <div class="mine_info">
+                <div class="mine_avatar"></div>
+                <div class="mine_name">James</div>
+            </div>
+            <ul class="base_nav">
+                <li>
+                    <a href="order_list.htm" class="base_nav_item">
+                        我的订单
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+           <!-- <div class="order">
+                &lt;!&ndash; 发型师基本信息&ndash;&gt;
+                <div class="artisan_info">
+                    <div class="artisan">
+                        <div class="avatar">
+
+                        </div>
+                        <div class="base_info">
+                            <div class="artisan_name_lv">
+                                <div class="artisan_name">James</div>
+                                <div class="artisan_level">
+                                    &lt;!&ndash;<div class="lv1_2"></div>&ndash;&gt;
+                                </div>
+                            </div>
+                            <div class="work_info">
+                                <div class="work_year">从业<span>10</span>年</div>
+                                <div class="work_type">美发/造型</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="other_info">
+                        <div class="order_count">
+                            预约数: <span>123</span>
+                        </div>
+                        <div class="service_circle">服务商圈: 中山公园 人民广场</div>
+                    </div>
+                </div>
+
+                &lt;!&ndash; 门店信息&ndash;&gt;
+                <div class="shop">
+                    <a class="shop_container" href="#">
+                        <div class="shop_info">
+                            <div class="shop_name">约来约美体验中心</div>
+                            <div class="shop_address">徐汇区xxxxxxxxxx</div>
+                        </div>
+                        &lt;!&ndash;<span class="shop_tag">门店</span>&ndash;&gt;
+                    </a>
+                </div>
+
+                <div class="pre_order">
+                    <div class="title">预约时间</div>
+                    <div class="week">
+                        <span class="weekday">日</span>
+                        <span class="weekday">日</span>
+                        <span class="weekday">日</span>
+                        <span class="weekday">日</span>
+                        <span class="weekday">日</span>
+                        <span class="weekday">日</span>
+                        <span class="weekday">日</span>
+                    </div>
+                    <div class="schedule">
+                        <div class="dates">
+                            <span class="date">1</span>
+                            <span class="date">2</span>
+                            <span class="date">3</span>
+                            <span class="date">4</span>
+                            <span class="date">5</span>
+                            <span class="date">6</span>
+                            <span class="date">7</span>
+                        </div>
+
+                        <div class="schedule_list">
+                            <label class="schedule_item " status="可预约" time="12:00">
+                                <input type="radio" name="schedule" class="schedule_radio"/>
+                            </label><label class="schedule_item " status="可预约" time="13:00">
+                                <input type="radio" name="schedule" class="schedule_radio"/>
+                            </label><label class="schedule_item " status="可预约" time="14:00">
+                                <input type="radio" name="schedule" class="schedule_radio"/>
+                            </label><label class="schedule_item " status="可预约" time="15:00">
+                                <input type="radio" name="schedule" class="schedule_radio"/>
+                            </label><label class="schedule_item " status="可预约" time="16:00">
+                                <input type="radio" name="schedule" class="schedule_radio"/>
+                            </label><label class="schedule_item " status="可预约" time="17:00">
+                                <input type="radio" name="schedule" class="schedule_radio"/>
+                            </label><label class="schedule_item " status="可预约" time="18:00">
+                                <input type="radio" name="schedule" class="schedule_radio"/>
+                            </label><label class="schedule_item " status="可预约" time="19:00">
+                                <input type="radio" name="schedule" class="schedule_radio"/>
+                            </label><label class="schedule_item " status="可预约" time="20:00">
+                                <input type="radio" name="schedule" class="schedule_radio"/>
+                            </label>
+                        </div>
+                        <label class="face_to_face">
+                            <input type="radio" name="schedule" class="face_to_face_schedule_radio">
+                            <span>当面约</span>
+                        </label>
+                    </div>
+                    <div class="tip">
+                        温馨提示：选择当面约请先和发型师沟通确认可立即进行服务
+                    </div>
+
+                    <div class="dynamic">
+                        <div class="dynamic_title">
+                            发型师动态
+                            <div class="styles">擅长: <span>{{ styles.join(' ') }}</span></div>
+                        </div>
+
+                        <div class="dynamic_images">
+                            <figure class="dynamic_image">动态图片</figure>
+                        </div>
+
+                        <div class="dynamic_intro">
+                            进修于沙宣、TONI&GUY，曾在香港铜锣湾利舞台广场的Esprit Salon工作；擅长根据客人的脸型，职业捕捉设计灵感。
+                        </div>
+
+                    </div>
+                </div>
+            </div>-->
+        </div>
+    </div>
+    <!--<weekday :day="day" :week="week"></weekday>-->
+    <!--<div>{{ occupyStatusStr(dates[0]['scheduleList'][0]['occupyStatus']) }}</div>-->
+</div>
+
+<script src="../../js/public/zepto.min.js"></script>
+<script src="../../js/public/vue.js"></script>
+<script src="../../js/order/order.js">
+
+</script>
+</body>
+</html>

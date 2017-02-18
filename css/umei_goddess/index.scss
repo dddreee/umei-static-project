@@ -1,0 +1,335 @@
+@import "modal";
+@keyframes arrow_fade {
+  0%{opacity: 1; transform: translate(0, 0)}
+  100%{opacity: 0; transform: translate(0, 10px)}
+}
+.swiper-container{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  //background: red;
+  background: url("../../images/umei_goddess/bg.png") repeat-y;
+  background-size: 100% auto;
+  color: #786758;
+
+  .swiper-page-1{
+    display: table;
+    width: 0.23rem;
+    margin: 0 auto;
+    font-size: 0.23rem;
+    .page-content{
+      display: table-cell;
+      vertical-align: middle;
+
+    }
+
+  }
+
+  .swiper-page-2{
+    padding-bottom: 0.2rem;
+    box-sizing: border-box;
+
+    .flex-ver-box{
+      //padding: 0.03rem 0.05rem;
+      height: 100%;
+      display: flex;
+      display: -webkit-flex;
+      flex-direction: column;
+      -webkit-flex-direction: column;
+
+      .flex-item{
+        flex: 1;
+        -webkit-flex: 1;
+        box-sizing: border-box;
+        position: relative;
+        margin: 0.03rem 0.05rem;
+      }
+    }
+
+    .flex-hor-box{
+      //padding: 0.03rem 0.05rem;
+      box-sizing: border-box;
+      display: flex;
+      display: -webkit-flex;
+      flex-direction: row;
+      -webkit-flex-direction: row;
+      height: 100%;
+
+    }
+    .step-img{
+      border-radius: 0.05rem;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      overflow: hidden;
+
+      //background-clip: content-box;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.29);
+    }
+    .step-img-1{
+      background: url("../../images/umei_goddess/img_1.png") no-repeat center center/ cover;
+    }
+    .step-img-2{
+      background: url("../../images/umei_goddess/img_2.png") no-repeat center center/ cover;
+    }
+    .step-img-3{
+      background: url("../../images/umei_goddess/img_3.png") no-repeat center center/ cover;
+    }
+    .step-img-4{
+      background: url("../../images/umei_goddess/img_4.png") no-repeat center center/ cover;
+    }
+    .step-img-content{
+      width: 0.14rem;
+      font-size: 0.14rem;
+      padding: 0.02rem;
+      color: #786758;
+      background: #fff;
+      position: absolute;
+      left: 0.1rem;
+      top: 0.1rem;
+      z-index: 1;
+    }
+  }
+
+  .next_btn{
+    width: 0.4rem;
+    height: 0.2rem;
+    background: url("../../images/umei_goddess/icon_arrow_bottom.png") no-repeat top center/0.18rem auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 0;
+    z-index: 1;
+    -webkit-animation: arrow_fade 0.8s infinite;
+    -o-animation: arrow_fade 0.8s infinite;
+    animation: arrow_fade 0.8s infinite;
+
+  }
+}
+
+.index{
+  background: url("../../images/umei_goddess/bg.png") repeat top center/100% auto;
+  color: #fff;
+.index_body{
+  padding: 0.2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+  .index_content{
+    background: #B3CBF9;
+
+    .index_title{
+      font-size: 0.17rem;
+      line-height: 1.2;
+    }
+
+    .index_list{
+      .index_item{
+        margin-top: 0.2rem;
+
+        .index_btn{
+          width: 1.82rem;
+          display: inline-block;
+          padding: 0.14rem 0;
+          font-size: 0.14rem;
+
+        }
+        .goddess_btn,
+        .recommend_btn{
+          background: url("../../images/umei_goddess/btn-bg.png") no-repeat center;
+          background-size: 100% 100%;
+          color: #fff;
+        }
+
+        .share_btn{
+          background: url("../../images/umei_goddess/btn-border.png") no-repeat center;
+          background-size: 100% 100%;
+          color: #00D5B6;
+        }
+      }
+    }
+  }
+}
+.rule{
+  width: 3.33rem;
+  box-sizing: border-box;
+  margin: 0 auto;
+  position: relative;
+  padding: 0.16rem 0.15rem 0.15rem 0.25rem;
+  text-align: left;
+  font-size: 0.12rem;
+  border-radius: 7px;
+  border: 1px solid #7C6B5C;
+  background: #fff;
+  color: #7C6B5C;
+  margin-top: 0.5rem;
+
+  .rule_title{
+    position: absolute;
+    left: 0.1rem;
+    top: -0.25rem;
+    font-size: 0.14rem;
+    width: 0.85rem;
+    height: 0.3rem;
+    line-height: 0.3rem;
+    border-radius: 7px 7px 0 0;
+    border: 1px solid #7C6B5C;
+    background: rgba(255,255,255,.9);
+    text-align: center;
+
+
+  }
+  .rule_body{
+    p{
+      line-height: 0.27rem;
+    }
+    .check_rule{
+      margin-top: 0.3rem;
+    }
+  }
+
+
+}
+
+//报名 dialog
+.sign{
+  //width: 0;
+  width: 2.81rem;
+  box-sizing: border-box;
+  background: #F7FAFF;
+  //height: 0;
+  transform: scale(0,0);
+  transform-origin: left top;
+  transition: all .5s ease-in;
+  -webkit-transition: all .5s ease-in;
+  position: fixed;
+  left: 0.47rem;
+  top: 0.8rem;
+  z-index: 999;
+  padding: 0.28rem 0;
+  border-radius: 7px;
+  color: #96877A;
+
+  .choose_img{
+    width: 0.85rem;
+    height: 0.85rem;
+    border-radius: 7px;
+    border: 1px solid #96877A;
+    margin: 0.13rem auto 0.1rem auto;
+    position: relative;
+    overflow: hidden;
+    background: url("../../images/umei_goddess/icon_plus.png") no-repeat center/0.21rem 0.21rem;
+  }
+  .label_btn{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  .file_btn{
+    /*position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;*/
+    display: none;
+    //visibility: hidden;
+  }
+  .close_btn{
+    position: absolute;
+    width: 0.35rem;
+    height: 0.35rem;
+    border-radius: 50%;
+    background: url("../../images/umei_goddess/icon_close.png") no-repeat center / cover;
+    z-index: 10;
+    right: -0.18rem;
+    top: -0.18rem;
+    
+  }
+
+  .label_tip{
+    line-height: 0.2rem;
+    font-size: 0.11rem;
+  }
+  .sign_input{
+    display: block;
+    padding: 0.07rem 0.05rem;
+    border-radius: 0.5rem;
+    border: 1px solid #96877A;
+    box-sizing: border-box;
+    width: 1.57rem;
+    text-align: center;
+    margin: 0.1rem auto 0 auto;
+    color: #96877A;
+
+  }
+  .sign_input::-webkit-input-placeholder, .code::-webkit-input-placeholder{
+    color: #96877A;
+  }
+  .warn{
+    border-color: #ff8171;
+    color: #ff8171;
+  }
+  .success{
+    border-color: #01d5b6;
+    color: #01d5b6;
+  }
+
+  .sign_up_btn{
+    display: block;
+    width: 1.57rem;
+    box-sizing: border-box;
+    padding: 0.11rem 0.05rem;
+    background: url("../../images/umei_goddess/btn-bg.png") no-repeat center /100% 100%;
+    margin: 0.1rem auto 0 auto;
+    color: #fff;
+
+  }
+  .sign_up_btn[disabled]{
+    background: url("../../images/umei_goddess/btn_disabled_bg.png") no-repeat center/100% 100%;
+  }
+  /*.code{
+    width: 0.85rem;
+    border: 1px solid #96877A;
+    //font-size: 0.15rem;
+    padding: 0.07rem 0.05rem;
+    box-sizing: border-box;
+    border-radius: 0.2rem;
+    //text-indent: 0.1rem;
+    //margin: 0.05rem 0 0;
+    text-align: center;
+    color: #96877A;
+    vertical-align: middle;
+    display: inline-block;
+  }
+  .get_code{
+    display: inline-block;
+    padding: 0.07rem 0.05rem;
+    vertical-align: middle;
+    background: #FFE50F;
+    border-radius: 4px;
+    color: #96877A;;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  .get_code[disabled]{
+    background: #d7d7d7;
+  }*/
+
+}
+
+.show{
+  background: rgba(0,0,0,0.6);
+  left: 0;
+  //z-index: 999;
+}

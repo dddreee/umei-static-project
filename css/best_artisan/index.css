@@ -1,0 +1,525 @@
+@keyframes countDown {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@-webkit-keyframes countDown {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@-moz-keyframes countDown {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@-o-keyframes countDown {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@keyframes show {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-webkit-keyframes show {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes game_over {
+  0% {
+    opacity: 0;
+    top: -0.55rem; }
+  100% {
+    opacity: 1;
+    top: 0.8rem; } }
+@-webkit-keyframes game_over {
+  0% {
+    opacity: 0;
+    top: -0.55rem; }
+  100% {
+    opacity: 1;
+    top: 0.8rem; } }
+@keyframes in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-webkit-keyframes in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+body {
+  background: url("../../images/best_artisan/bg_block.png") repeat;
+  background-size: 10px 10px; }
+
+.index {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background: url("../../images/best_artisan/bg_block.png") repeat;
+  background-size: 10px 10px; }
+  .index .index_content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background: url("../../images/best_artisan/icon_scissors_bg.png") no-repeat top;
+    background-size: 100% auto; }
+    .index .index_content .index_artisan {
+      margin: 0.23rem auto 0;
+      position: relative;
+      max-width: 480px; }
+    .index .index_content .rule_btn {
+      position: absolute;
+      width: 0.79rem;
+      margin-left: 0.44rem;
+      bottom: 0.15rem;
+      z-index: 11; }
+    .index .index_content .rule_title {
+      position: relative;
+      width: 3.54rem;
+      margin-left: 0.05rem;
+      margin-top: -0.1rem; }
+      .index .index_content .rule_title > img {
+        position: relative;
+        z-index: 12; }
+    .index .index_content .index_play_btn {
+      position: absolute;
+      left: 1.11rem;
+      bottom: 0.26rem;
+      width: 1.45rem;
+      z-index: 13; }
+
+.content {
+  background: url("../../images/best_artisan/bg_block.png") repeat;
+  background-size: 10px 10px;
+  display: none; }
+
+.play_box {
+  width: 100%;
+  padding: 0.15rem 0.1rem 0 0.1rem;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none; }
+  .play_box .play_head {
+    background: url("../../images/best_artisan/head_bg.png") no-repeat;
+    background-size: 100% 100%;
+    padding: 0.05rem 0 0.15rem 0.49rem;
+    position: relative;
+    text-align: left; }
+    .play_box .play_head .artisan_img {
+      width: 0.42rem;
+      position: absolute;
+      left: 0;
+      top: -0.05rem;
+      border: 1px solid #4C0A0C;
+      border-radius: 4px;
+      overflow: hidden; }
+    .play_box .play_head .artisan_name {
+      color: #4C0A0C;
+      font-size: 0.14rem;
+      font-weight: bold;
+      line-height: 0.165rem; }
+    .play_box .play_head .href_artisan {
+      margin-top: 0.05rem;
+      line-height: 0.13rem; }
+      .play_box .play_head .href_artisan .href_artisan_img {
+        width: 1.57rem; }
+    .play_box .play_head .call_friend {
+      width: 0.98rem;
+      position: absolute;
+      right: 0.16rem;
+      top: 0.05rem; }
+  .play_box .play_body {
+    border: 1px solid #4C0A0C;
+    background: #FFE50F;
+    border-radius: 4px;
+    padding: 0.1rem;
+    margin-top: -0.05rem;
+    position: relative;
+    z-index: 2; }
+    .play_box .play_body .play_body_padding {
+      border-radius: 4px;
+      border: 1px solid #4C0A0C;
+      background: url("../../images/best_artisan/icon_dot.png") repeat;
+      background-size: 15px 15px; }
+      .play_box .play_body .play_body_padding .play_body_content {
+        border-radius: 4px;
+        padding-top: 0.57rem;
+        border: 3px solid rgba(51, 51, 51, 0.3);
+        position: relative; }
+        .play_box .play_body .play_body_padding .play_body_content .info_box {
+          position: absolute;
+          right: 0.02rem;
+          bottom: 0.02rem;
+          text-align: right;
+          font-size: 0.1rem;
+          letter-spacing: 0; }
+          .play_box .play_body .play_body_padding .play_body_content .info_box a {
+            color: #fff; }
+          .play_box .play_body .play_body_padding .play_body_content .info_box .info_box_get_umei_coin {
+            margin-bottom: 0.05rem;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 2px 0 0 2px;
+            padding: 2px 5px;
+            color: #774B24; }
+          .play_box .play_body .play_body_padding .play_body_content .info_box .icon_coin {
+            display: inline-block;
+            width: 0.05rem;
+            height: 0.05rem;
+            border-radius: 100%;
+            vertical-align: middle;
+            background: #FFDE26;
+            margin-right: 2px; }
+        .play_box .play_body .play_body_padding .play_body_content .play_people_img {
+          width: 2.26rem;
+          vertical-align: bottom; }
+        .play_box .play_body .play_body_padding .play_body_content .clock {
+          position: absolute;
+          top: 0.1rem;
+          right: 0.1rem;
+          width: 0.41rem; }
+          .play_box .play_body .play_body_padding .play_body_content .clock .clock_arrow {
+            width: 0.1rem;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            bottom: 0.19rem;
+            transform-origin: bottom; }
+        .play_box .play_body .play_body_padding .play_body_content .clock_rotate {
+          -webkit-animation: countDown 10s linear;
+          -o-animation: countDown 10s linear;
+          animation: countDown 10s linear; }
+        .play_box .play_body .play_body_padding .play_body_content .play_progress {
+          width: 0.3rem;
+          height: 1.3rem;
+          border-radius: 4px;
+          border: 1px solid #4C0A0C;
+          position: absolute;
+          right: 0.1rem;
+          top: 0.82rem;
+          background: url("../../images/best_artisan/progress_bg.png") no-repeat top;
+          background-size: 100% 100%;
+          padding: 1px;
+          box-sizing: border-box;
+          overflow: hidden; }
+          .play_box .play_body .play_body_padding .play_body_content .play_progress .progress_height {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #FF4179;
+            height: 1%; }
+        .play_box .play_body .play_body_padding .play_body_content .success_toast {
+          position: absolute;
+          left: 0;
+          right: 0;
+          margin: auto;
+          top: 0.65rem;
+          z-index: 999;
+          padding: 0.05rem 0;
+          width: 1.57rem;
+          color: #4F0810;
+          font-size: 0.2rem;
+          background: #fff;
+          border: 1px solid #4F0810;
+          border-radius: 4px; }
+
+.play_control {
+  width: 100%;
+  background: url("../../images/best_artisan/start_top_bg.png") no-repeat;
+  background-size: 100% 100%;
+  margin-top: 0.1rem; }
+  .play_control .play_control_head {
+    text-align: left;
+    padding: 0.1rem 0 0.1rem 0.16rem;
+    position: relative; }
+    .play_control .play_control_head .play_control_head_info .niubi_img {
+      width: 0.71rem; }
+    .play_control .play_control_head .play_control_head_info .niubi_count {
+      display: inline-block;
+      width: 1.59rem;
+      text-align: center;
+      font-size: 0.36rem;
+      letter-spacing: 0.125rem;
+      background: url("../../images/best_artisan/number_bg.png") no-repeat;
+      background-size: 100% 100%;
+      vertical-align: middle;
+      margin-left: 0.06rem;
+      text-indent: 0.04rem; }
+    .play_control .play_control_head .play_control_btn {
+      position: absolute;
+      width: 1.1rem;
+      right: 0;
+      top: 0.1rem; }
+    .play_control .play_control_head .charts_btn {
+      width: 2.37rem;
+      margin-top: 0.1rem; }
+
+.charts {
+  padding: 0.1rem;
+  background: #FFE50F url("../../images/best_artisan/charts_dot.png") repeat;
+  background-size: 14px; }
+  .charts .artisan_list .artisan_item {
+    padding: 0.08rem 0.96rem 0.08rem 0.56rem;
+    border-radius: 10px;
+    border: 1px solid #4C0A0C;
+    background: #fff;
+    font-size: 0.14rem;
+    position: relative;
+    text-align: left;
+    margin-bottom: 0.1rem; }
+    .charts .artisan_list .artisan_item .artisan_img {
+      position: absolute;
+      left: 0.03rem;
+      top: 0.03rem;
+      width: 0.45rem;
+      height: 0.45rem;
+      background: url("../../images/best_artisan/artisan_img.png") no-repeat center;
+      background-size: cover;
+      border: 1px solid #4C0A0C;
+      border-radius: 50%; }
+    .charts .artisan_list .artisan_item .artisan_name {
+      color: #4C0A0C; }
+    .charts .artisan_list .artisan_item .artisan_count {
+      color: #fff;
+      font-size: 0.13rem;
+      background: #00A0E9;
+      margin-top: 0.04rem;
+      border-radius: 0.2rem;
+      text-indent: 0.05rem;
+      border: 1px solid #4C0A0C; }
+    .charts .artisan_list .artisan_item .feed_btn {
+      position: absolute;
+      right: 0.1rem;
+      bottom: 0.11rem; }
+      .charts .artisan_list .artisan_item .feed_btn img {
+        width: 0.79rem; }
+
+.rule {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  display: table;
+  padding: 0 0.27rem;
+  box-sizing: border-box; }
+  .rule .rule_box {
+    text-align: left;
+    display: table-cell;
+    vertical-align: middle; }
+    .rule .rule_box .rule_content {
+      border: 1px solid #4C0A0C;
+      border-radius: 7px;
+      position: relative;
+      background: #FFDE26;
+      color: #4F0810;
+      padding: 0 0.14rem; }
+      .rule .rule_box .rule_content .rule_head {
+        text-align: center;
+        font-size: 0.19rem;
+        padding: 0.18rem 0; }
+      .rule .rule_box .rule_content .rule_body {
+        font-size: 0.15rem;
+        max-height: 720px;
+        overflow-y: auto; }
+        .rule .rule_box .rule_content .rule_body .p {
+          margin-bottom: 0.15rem; }
+        .rule .rule_box .rule_content .rule_body p {
+          line-height: 1.2; }
+      .rule .rule_box .rule_content .rule_close_btn {
+        position: absolute;
+        width: 0.43rem;
+        height: 0.43rem;
+        background: url("../../images/best_artisan/icon_close.png") no-repeat center;
+        background-size: cover;
+        right: -0.21rem;
+        top: -0.21rem; }
+
+#game_box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99; }
+  #game_box img {
+    position: absolute; }
+  #game_box .icon_boom {
+    width: 0.45rem; }
+  #game_box .icon_banana {
+    width: 0.26rem; }
+  #game_box .icon_apple {
+    width: 0.23rem; }
+  #game_box .icon_blower {
+    width: 0.33rem; }
+
+.display_none {
+  display: none; }
+
+.mask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.3);
+  display: none; }
+
+.boom_img {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 999;
+  transform: scale(0, 0);
+  -webkit-transform: scale(0, 0);
+  -webkit-transition: transform 0.3s ease-out;
+  -moz-transition: transform 0.3s ease-out;
+  -ms-transition: transform 0.3s ease-out;
+  -o-transition: transform 0.3s ease-out;
+  transition: transform .3s ease-out; }
+
+.game_over_ani {
+  -webkit-animation: game_over 0.5s;
+  -o-animation: game_over 0.5s;
+  animation: game_over 0.5s; }
+
+.game_over_img {
+  width: 3.2rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: -0.55rem;
+  z-index: 999;
+  opacity: 0;
+  animation-fill-mode: both;
+  -webkit-animation-fill-mode: both; }
+
+.game_time_toast {
+  position: absolute;
+  width: 2rem;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 0.15rem;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  display: none;
+  margin: auto;
+  border-radius: 8px;
+  z-index: 999; }
+
+.in {
+  display: block;
+  -webkit-animation: in 0.5s ease-in;
+  -o-animation: in 0.5s ease-in;
+  animation: in 0.5s ease-in;
+  animation-fill-mode: both; }
+
+.login {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  display: none;
+  -webkit-transition: top 0.3s;
+  -moz-transition: top 0.3s;
+  -ms-transition: top 0.3s;
+  -o-transition: top 0.3s;
+  transition: top 0.3s; }
+  .login .login_content {
+    display: table-cell;
+    vertical-align: middle; }
+    .login .login_content .login_box {
+      width: 2.65rem;
+      border-radius: 8px;
+      background: #00F0C9;
+      margin: 0 auto;
+      box-sizing: border-box; }
+      .login .login_content .login_box .login_title {
+        padding: 0.13rem 0; }
+        .login .login_content .login_box .login_title img {
+          width: 0.56rem; }
+      .login .login_content .login_box .phone_num {
+        width: 1.98rem;
+        border: 1px solid #4F0810;
+        font-size: 0.15rem;
+        padding: 0.05rem;
+        box-sizing: border-box;
+        border-radius: 0.2rem;
+        text-indent: 0.1rem;
+        margin: 0.05rem 0 0; }
+      .login .login_content .login_box .login_btn {
+        padding: 0.05rem 0.16rem 0.1rem 0.16rem;
+        background: url("../../images/best_artisan/login_btn_bg.png") no-repeat center;
+        background-size: 100% 100%;
+        font-size: 0.15rem;
+        color: #4F0810;
+        margin-top: 0.13rem;
+        margin-bottom: 0.19rem; }
+
+.show {
+  display: block;
+  -webkit-animation: show 0.3s;
+  -o-animation: show 0.3s;
+  animation: show 0.3s; }
+
+@media screen and (max-height: 481px) {
+  .index .index_content .index_artisan {
+    width: 2.8rem; } }
+
+/*# sourceMappingURL=index.css.map */
