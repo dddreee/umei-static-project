@@ -624,7 +624,7 @@ input:-ms-input-placeholder {
   background: #02F3D0 url("../../images/shop_activity/discount_bg.png") no-repeat top center/100% auto; }
   .discount .discount_content {
     margin-top: 0.2rem; }
-    .discount .discount_content .phone_input {
+    .discount .discount_content .form .phone_input {
       display: block;
       padding: 0.1rem;
       box-sizing: border-box;
@@ -636,9 +636,9 @@ input:-ms-input-placeholder {
       border: 1px solid #fff;
       background: rgba(255, 255, 255, 0.2);
       text-align: center; }
-    .discount .discount_content .phone_input::-webkit-input-placeholder {
+    .discount .discount_content .form .phone_input::-webkit-input-placeholder {
       color: #fff; }
-    .discount .discount_content .form-group {
+    .discount .discount_content .form .form-group {
       display: block;
       box-sizing: border-box;
       color: #fff;
@@ -649,7 +649,7 @@ input:-ms-input-placeholder {
       background: rgba(255, 255, 255, 0.2);
       text-align: center;
       position: relative; }
-      .discount .discount_content .form-group .get_code {
+      .discount .discount_content .form .form-group .get_code {
         position: absolute;
         font-size: 0.13rem;
         padding: 0.1rem 0;
@@ -661,7 +661,10 @@ input:-ms-input-placeholder {
         top: 0;
         right: 0;
         z-index: 1; }
-      .discount .discount_content .form-group .phone_code {
+      .discount .discount_content .form .form-group .get_code:disabled {
+        background: #d7d7d7;
+        color: #fff; }
+      .discount .discount_content .form .form-group .phone_code {
         box-sizing: border-box;
         display: block;
         padding: 0.1rem;
@@ -671,9 +674,9 @@ input:-ms-input-placeholder {
         font-size: 0.16rem;
         background: transparent;
         border-radius: 0.5rem 0 0 0.5rem; }
-      .discount .discount_content .form-group .phone_code::-webkit-input-placeholder {
+      .discount .discount_content .form .form-group .phone_code::-webkit-input-placeholder {
         color: #fff; }
-    .discount .discount_content .get_discount {
+    .discount .discount_content .form .get_discount {
       width: 2.66rem;
       display: block;
       margin: 0.3rem auto 0 auto;
@@ -683,6 +686,14 @@ input:-ms-input-placeholder {
       color: #01d5b6;
       border-radius: 0.5rem;
       box-shadow: 0 3px 2px 0 rgba(0, 0, 0, 0.3); }
+    .discount .discount_content .form .get_discount:disabled {
+      background: #d7d7d7;
+      color: #fff; }
+  .discount .success {
+    text-align: center; }
+    .discount .success .title {
+      font-size: 0.15rem;
+      color: #fff; }
 
 .orange {
   background: #F5A623; }

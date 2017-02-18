@@ -391,6 +391,7 @@
   background: #02F3D0 url("../../images/shop_activity/discount_bg.png") no-repeat top center / 100% auto;
   .discount_content{
     margin-top: 0.2rem;
+    .form{
     .phone_input{
       display: block;
       padding: 0.1rem;
@@ -437,6 +438,10 @@
         z-index: 1;
 
       }
+      .get_code:disabled{
+        background: #d7d7d7;
+        color: #fff;
+      }
 
       .phone_code{
         //position: absolute;
@@ -467,8 +472,22 @@
       border-radius: 0.5rem;
       box-shadow: 0 3px 2px 0 rgba(0,0,0,0.3);
     }
+      .get_discount:disabled{
+        background: #d7d7d7;
+        color: #fff;
+      }
+    }
   }
 
+  .success{
+    text-align: center;
+
+    .title{
+      font-size: 0.15rem;
+      color: #fff;
+
+    }
+  }
 
 }
 
