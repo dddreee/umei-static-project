@@ -487,6 +487,88 @@
       color: #fff;
 
     }
+    .ticket_list{
+      .ticket_item{
+        //width: 2.88rem;
+        display: inline-block;
+        background: #fff;
+        border-radius: 0.06rem;
+        overflow: hidden;
+        letter-spacing: normal;
+        .ticket_head{
+          color: #50E3C2;
+          width: 1.12rem;
+          display: inline-block;
+          padding: 0.12rem 0;
+          text-align: center;
+          font-size: 0.11rem;
+          box-sizing: border-box;
+          border-right: 1px dashed #d7d7d7;
+          position: relative;
+          vertical-align: middle;
+
+          .ticket_price{
+            font-size: 0.5rem;
+          }
+
+
+        }
+
+        .ticket_head:after{
+          content: '';
+          position: absolute;
+          top: -0.1rem;
+          width: 0.2rem;
+          height: 0.2rem;
+          border-radius: 50%;
+          background: #02F3D0;
+          right: -0.1rem;
+          z-index: 1;
+        }
+        .ticket_head:before{
+          content: '';
+          position: absolute;
+          bottom: -0.1rem;
+          width: 0.2rem;
+          height: 0.2rem;
+          border-radius: 50%;
+          background: #02F3D0;
+          right: -0.1rem;
+          z-index: 1;
+
+        }
+
+        .ticket_body{
+          width: 1.75rem;
+          text-align: left;
+          display: inline-block;
+          vertical-align: middle;
+          box-sizing: border-box;
+          padding-left: 0.1rem;
+          font-size: 0.1rem;
+          .ticket_title{
+            font-size: 0.12rem;
+            color: #50E3C2;
+            .ticket_tag{
+              font-size: 0.13rem;
+              padding: 0.03rem 0.1rem;
+              border-radius: 0.2rem;
+              background: #50E3C2;
+              margin-right: 0.02rem;
+              color: #fff;
+
+            }
+
+          }
+          .ticket_desc{
+            color: #999;
+            margin-top: 0.05rem;
+          }
+        }
+
+
+      }
+    }
   }
 
 }
@@ -503,6 +585,14 @@
       color: #666;
     }
 
+  }
+  .temp_b{
+    .content_box{
+      color: #fff;
+    }
+    .shop_name{
+      background: url("../../images/shop_activity/temp_b/temp_b_title_bg_orange.png") no-repeat center / contain;
+    }
   }
 
   .temp_c{
@@ -549,6 +639,9 @@
     .content_title{
       color: #666;
     }
+    .content_box{
+      color: #fff
+    }
   }
 
 }
@@ -570,9 +663,36 @@
     }*/
   }
 
+  .temp_b{
+    .content_box{
+      color: #fff;
+    }
+    .shop_name{
+      background: url("../../images/shop_activity/temp_b/temp_b_title_bg_green.png") no-repeat center / contain;
+    }
+  }
+
   .temp_c{
     .figure{
       background: url("../../images/shop_activity/temp_c/temp_c_figure_bg_green.png") no-repeat center / 100% 100%;
+    }
+  }
+
+  .temp_d{
+    .temp_d_bg_line{
+      background: #fff;
+    }
+    .content_box{
+      .temp_d_content_line, .temp_d_tag{
+        background: $base_color;
+        color: #fff;
+      }
+      .shop_name, .shop_address{
+        color: $base_color;
+      }
+    }
+    .temp_d_tag_last:after{
+      border-top-color: $base_color;
     }
   }
 
@@ -608,9 +728,35 @@
 
   }
 
+  .temp_b{
+    .shop_name{
+      background: url("../../images/shop_activity/temp_b/temp_b_title_bg_darkblue.png") no-repeat center / contain;
+    }
+    .content_box{
+      color: #fff;
+    }
+  }
+
   .temp_c{
     .figure{
       background: url("../../images/shop_activity/temp_c/temp_c_figure_bg_darkblue.png") no-repeat center / 100% 100%;
+    }
+  }
+
+  .temp_d{
+    .temp_d_bg_line{
+      background: #fff;
+    }
+    .temp_d_content_line, .temp_d_tag{
+      background: #4A90E2;
+      color: #fff;
+    }
+
+    .temp_d_tag_last:after{
+      border-top-color: #4A90E2;
+    }
+    .shop_name, .shop_address{
+      color: #4A90E2;
     }
   }
 
@@ -650,6 +796,12 @@
     }*/
   }
 
+  .temp_b{
+    .content_box{
+      color: #4A90E2;
+    }
+  }
+
   .temp_c{
     .shop_address, .shop_name{
       color: #1174E9;
@@ -659,6 +811,37 @@
     }
     .figure{
       background: url("../../images/shop_activity/temp_c/temp_c_figure_bg_blue.png") no-repeat center / 100% 100%;
+    }
+  }
+
+  .temp_d{
+    .temp_d_bg_line{
+      background: #4A90E2;
+    }
+    .temp_d_content_line, .temp_d_tag{
+      background: #B7D8FF;
+      color: #fff;
+    }
+
+    .temp_d_tag_last:after{
+      border-top-color: #B7D8FF;
+    }
+    .shop_name, .shop_address{
+      color: #fff;
+    }
+  }
+
+  .temp_e{
+    .gradient{
+      background: -webkit-linear-gradient(transparent, #B7D8FF);
+      background: linear-gradient(transparent, #B7D8FF);
+    }
+
+    .content_title{
+      color: #4A90E2;
+    }
+    .content{
+      color: #fff;
     }
   }
 }
@@ -673,6 +856,17 @@
     .content_title{
       color: #fff;
     }
+    .next_btn, .prev_btn{
+      background: url("../../images/shop_activity/temp_a/icon_angle_green.png") no-repeat center / 100% 100%;
+    }
+  }
+  .temp_b{
+    .shop_name{
+      background: url("../../images/shop_activity/temp_b/temp_b_title_bg_grey.png") no-repeat center / contain;
+    }
+    .content_box{
+      color: #fff;
+    }
   }
 
   .temp_c{
@@ -682,6 +876,37 @@
 
     .figure{
       background: url("../../images/shop_activity/temp_c/temp_c_figure_bg_grey.png") no-repeat center / 100% 100%;
+    }
+  }
+
+  .temp_d{
+    .temp_d_bg_line{
+      background: $base_color;
+    }
+    .temp_d_content_line, .temp_d_tag{
+      background: $base_color;
+      color: #fff;
+    }
+
+    .temp_d_tag_last:after{
+      border-top-color: $base_color;
+    }
+    .shop_name, .shop_address{
+      color: $base_color;
+    }
+  }
+
+  .temp_e{
+    .gradient{
+      background: -webkit-linear-gradient(transparent, #666);
+      background: linear-gradient(transparent, #666);
+    }
+
+    .content_title{
+      color: #666;
+    }
+    .content{
+      color: $base_color;
     }
   }
 }

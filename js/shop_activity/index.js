@@ -52,7 +52,61 @@ var data = {
                     ]
                 },
                 {
-
+                    templateId: 'temp_c',
+                    title: 'asfasdgfas',
+                    shopName: 'agasdfasgasf',
+                    shopAddress: 'agasfagas-2',
+                    content: [
+                        '内容内容内容内容内容内容内容内容内容',
+                        '内容内容内容内容内容内容内容内容内容内容内容内容内容内容'
+                    ],
+                    imgs: [
+                        {
+                            key: 'asfasd',
+                            link: '../../images/shop_activity/rect_bg.png'
+                        },
+                        {
+                            link: '../../images/shop_activity/rect_bg.png'
+                        }
+                    ]
+                },
+                {
+                    templateId: 'temp_d',
+                    title: 'asfasdgfas',
+                    shopName: 'agasdfasgasf',
+                    shopAddress: 'agasfagas-2',
+                    content: [
+                        'zhege',
+                        'nage'
+                    ],
+                    imgs: [
+                        {
+                            key: 'asfasd',
+                            link: '../../images/shop_activity/rect_bg.png'
+                        },
+                        {
+                            link: '../../images/shop_activity/rect_bg.png'
+                        }
+                    ]
+                },
+                {
+                    templateId: 'temp_e',
+                    title: 'asfasdgfas',
+                    shopName: 'agasdfasgasf',
+                    shopAddress: 'agasfagas-2',
+                    content: [
+                        '内容内容内容内容内容内容内容内容内容',
+                        '内容内容内容内容内容内容内容内容内容内容内容内容内容内容'
+                    ],
+                    imgs: [
+                        {
+                            key: 'asfasd',
+                            link: '../../images/shop_activity/rect_bg.png'
+                        },
+                        {
+                            link: '../../images/shop_activity/rect_bg.png'
+                        }
+                    ]
                 }
             ]
         }
@@ -70,7 +124,7 @@ var temp_a = Vue.extend({
             return '../../images/shop_activity/temp_a/temp_a_' + this.colorStyle + '_rectangle.png'
         },
         divide_src:function(){
-            return this.colorStyle === 'page_color_grey' ? '../../images/shop_activity/temp_a/temp_a_divide_green.png' : '../../images/shop_activity/temp_a/temp_a_divide_white.png'
+            return this.colorStyle === 'grey' ? '../../images/shop_activity/temp_a/temp_a_divide_green.png' : '../../images/shop_activity/temp_a/temp_a_divide_white.png'
         },
         fontColor: function(){
             return 'font_' + this.colorStyle;
@@ -148,6 +202,11 @@ var temp_b = Vue.extend({
 });
 
 var temp_c = Vue.extend({
+    data: function(){
+        return {
+            temp_c_swiper: ''
+        }
+    },
     props: ['name', 'page', 'address'],
     template: '<div class="temp_c swiper-slide">' +
     '<div class="shop_name">{{ name }}</div>' +
@@ -155,14 +214,19 @@ var temp_c = Vue.extend({
     '<div class="figure">' +
         '<div class="swiper-container temp_c_swiper">' +
             '<div class="swiper-wrapper temp_c_wrapper">' +
-                '<div v-for="img in page.imgs" class="swiper-slide temp_c_slide" :style="{background: \'(url\' + img.link + \') no-repeat center / cover\'}"></div>' +
+                '<div v-for="img in page.imgs" class="swiper-slide temp_c_slide" :style="{background: \'url(\' + img.link + \') no-repeat center / cover\'}"></div>' +
             '</div>' +
         '</div>' +
     '</div>' +
     '<div class="content">' +
         '{{ page.content[0] }}' +
     '</div>' +
-    '</div>'
+    '</div>',
+    ready: function(){
+        this.temp_c_swiper = new Swiper('.temp_c_swiper', {
+            direction: 'vertical'
+        })
+    }
 });
 
 var temp_d = Vue.extend({
@@ -189,11 +253,12 @@ var temp_d = Vue.extend({
 
 var temp_e = Vue.extend({
     props: ['name', 'address', 'page'],
-    template: '<div class="swiper-slide" content="temp_e">' +
+    template: '<div class="swiper-slide temp_e">' +
     '<div class="swiper-container temp_e_swiper">' +
     '<div class="swiper-wrapper temp_e_wrapper">' +
     '<div class="swiper-slide temp_e_slide"></div>' +
     '</div>' +
+    '<div class="gradient"></div>' +
     '</div>' +
 
     '<div class="content_box">' +

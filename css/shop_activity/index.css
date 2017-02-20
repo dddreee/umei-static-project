@@ -694,6 +694,66 @@ input:-ms-input-placeholder {
     .discount .success .title {
       font-size: 0.15rem;
       color: #fff; }
+    .discount .success .ticket_list .ticket_item {
+      display: inline-block;
+      background: #fff;
+      border-radius: 0.06rem;
+      overflow: hidden;
+      letter-spacing: normal; }
+      .discount .success .ticket_list .ticket_item .ticket_head {
+        color: #50E3C2;
+        width: 1.12rem;
+        display: inline-block;
+        padding: 0.12rem 0;
+        text-align: center;
+        font-size: 0.11rem;
+        box-sizing: border-box;
+        border-right: 1px dashed #d7d7d7;
+        position: relative;
+        vertical-align: middle; }
+        .discount .success .ticket_list .ticket_item .ticket_head .ticket_price {
+          font-size: 0.5rem; }
+      .discount .success .ticket_list .ticket_item .ticket_head:after {
+        content: '';
+        position: absolute;
+        top: -0.1rem;
+        width: 0.2rem;
+        height: 0.2rem;
+        border-radius: 50%;
+        background: #02F3D0;
+        right: -0.1rem;
+        z-index: 1; }
+      .discount .success .ticket_list .ticket_item .ticket_head:before {
+        content: '';
+        position: absolute;
+        bottom: -0.1rem;
+        width: 0.2rem;
+        height: 0.2rem;
+        border-radius: 50%;
+        background: #02F3D0;
+        right: -0.1rem;
+        z-index: 1; }
+      .discount .success .ticket_list .ticket_item .ticket_body {
+        width: 1.75rem;
+        text-align: left;
+        display: inline-block;
+        vertical-align: middle;
+        box-sizing: border-box;
+        padding-left: 0.1rem;
+        font-size: 0.1rem; }
+        .discount .success .ticket_list .ticket_item .ticket_body .ticket_title {
+          font-size: 0.12rem;
+          color: #50E3C2; }
+          .discount .success .ticket_list .ticket_item .ticket_body .ticket_title .ticket_tag {
+            font-size: 0.13rem;
+            padding: 0.03rem 0.1rem;
+            border-radius: 0.2rem;
+            background: #50E3C2;
+            margin-right: 0.02rem;
+            color: #fff; }
+        .discount .success .ticket_list .ticket_item .ticket_body .ticket_desc {
+          color: #999;
+          margin-top: 0.05rem; }
 
 .orange {
   background: #F5A623; }
@@ -701,6 +761,10 @@ input:-ms-input-placeholder {
     background: #FFCE56; }
   .orange .temp_a .content_title {
     color: #666; }
+  .orange .temp_b .content_box {
+    color: #fff; }
+  .orange .temp_b .shop_name {
+    background: url("../../images/shop_activity/temp_b/temp_b_title_bg_orange.png") no-repeat center/contain; }
   .orange .temp_c .shop_name {
     color: #fff; }
   .orange .temp_c .figure {
@@ -726,6 +790,8 @@ input:-ms-input-placeholder {
       background: linear-gradient(transparent, #F6B310); }
     .orange .temp_e .content_title {
       color: #666; }
+    .orange .temp_e .content_box {
+      color: #fff; }
 
 .green {
   background: #01D5B6; }
@@ -737,8 +803,21 @@ input:-ms-input-placeholder {
       background: #0AE1C1; }
     .green .temp_a .content_title {
       color: #666; }
+  .green .temp_b .content_box {
+    color: #fff; }
+  .green .temp_b .shop_name {
+    background: url("../../images/shop_activity/temp_b/temp_b_title_bg_green.png") no-repeat center/contain; }
   .green .temp_c .figure {
     background: url("../../images/shop_activity/temp_c/temp_c_figure_bg_green.png") no-repeat center/100% 100%; }
+  .green .temp_d .temp_d_bg_line {
+    background: #fff; }
+  .green .temp_d .content_box .temp_d_content_line, .green .temp_d .content_box .temp_d_tag {
+    background: #01d5b6;
+    color: #fff; }
+  .green .temp_d .content_box .shop_name, .green .temp_d .content_box .shop_address {
+    color: #01d5b6; }
+  .green .temp_d .temp_d_tag_last:after {
+    border-top-color: #01d5b6; }
   .green .temp_e {
     background: #01d5b6; }
     .green .temp_e .gradient {
@@ -755,8 +834,21 @@ input:-ms-input-placeholder {
     background: #579CED; }
   .darkblue .temp_a .content_title {
     color: #fff; }
+  .darkblue .temp_b .shop_name {
+    background: url("../../images/shop_activity/temp_b/temp_b_title_bg_darkblue.png") no-repeat center/contain; }
+  .darkblue .temp_b .content_box {
+    color: #fff; }
   .darkblue .temp_c .figure {
     background: url("../../images/shop_activity/temp_c/temp_c_figure_bg_darkblue.png") no-repeat center/100% 100%; }
+  .darkblue .temp_d .temp_d_bg_line {
+    background: #fff; }
+  .darkblue .temp_d .temp_d_content_line, .darkblue .temp_d .temp_d_tag {
+    background: #4A90E2;
+    color: #fff; }
+  .darkblue .temp_d .temp_d_tag_last:after {
+    border-top-color: #4A90E2; }
+  .darkblue .temp_d .shop_name, .darkblue .temp_d .shop_address {
+    color: #4A90E2; }
   .darkblue .temp_e {
     background: #4A90E2; }
     .darkblue .temp_e .gradient {
@@ -777,12 +869,30 @@ input:-ms-input-placeholder {
       background: #70ADF3; }
     .blue .temp_a .content_title {
       color: #4A90E2; }
+  .blue .temp_b .content_box {
+    color: #4A90E2; }
   .blue .temp_c .shop_address, .blue .temp_c .shop_name {
     color: #1174E9; }
   .blue .temp_c .content {
     color: #1174E9; }
   .blue .temp_c .figure {
     background: url("../../images/shop_activity/temp_c/temp_c_figure_bg_blue.png") no-repeat center/100% 100%; }
+  .blue .temp_d .temp_d_bg_line {
+    background: #4A90E2; }
+  .blue .temp_d .temp_d_content_line, .blue .temp_d .temp_d_tag {
+    background: #B7D8FF;
+    color: #fff; }
+  .blue .temp_d .temp_d_tag_last:after {
+    border-top-color: #B7D8FF; }
+  .blue .temp_d .shop_name, .blue .temp_d .shop_address {
+    color: #fff; }
+  .blue .temp_e .gradient {
+    background: -webkit-linear-gradient(transparent, #B7D8FF);
+    background: linear-gradient(transparent, #B7D8FF); }
+  .blue .temp_e .content_title {
+    color: #4A90E2; }
+  .blue .temp_e .content {
+    color: #fff; }
 
 .grey {
   background: #666; }
@@ -790,9 +900,31 @@ input:-ms-input-placeholder {
     background: #999; }
   .grey .temp_a .content_title {
     color: #fff; }
+  .grey .temp_a .next_btn, .grey .temp_a .prev_btn {
+    background: url("../../images/shop_activity/temp_a/icon_angle_green.png") no-repeat center/100% 100%; }
+  .grey .temp_b .shop_name {
+    background: url("../../images/shop_activity/temp_b/temp_b_title_bg_grey.png") no-repeat center/contain; }
+  .grey .temp_b .content_box {
+    color: #fff; }
   .grey .temp_c .shop_name, .grey .temp_c .shop_address {
     color: #01d5b6; }
   .grey .temp_c .figure {
     background: url("../../images/shop_activity/temp_c/temp_c_figure_bg_grey.png") no-repeat center/100% 100%; }
+  .grey .temp_d .temp_d_bg_line {
+    background: #01d5b6; }
+  .grey .temp_d .temp_d_content_line, .grey .temp_d .temp_d_tag {
+    background: #01d5b6;
+    color: #fff; }
+  .grey .temp_d .temp_d_tag_last:after {
+    border-top-color: #01d5b6; }
+  .grey .temp_d .shop_name, .grey .temp_d .shop_address {
+    color: #01d5b6; }
+  .grey .temp_e .gradient {
+    background: -webkit-linear-gradient(transparent, #666);
+    background: linear-gradient(transparent, #666); }
+  .grey .temp_e .content_title {
+    color: #666; }
+  .grey .temp_e .content {
+    color: #01d5b6; }
 
 /*# sourceMappingURL=index.css.map */
