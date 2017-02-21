@@ -3,7 +3,7 @@
  */
 
 $('html').css('font-size', document.documentElement.clientWidth/375*100);
-
+var test = /^(0|86|17951)?(13[0-9]|14[5789]|15[012356789]|17[0123456789]|18[0-9])[0-9]{8}$/;
 var data = {
         activityInfo: {
             auid: 'dddreee',
@@ -276,13 +276,15 @@ var discountPage = Vue.extend({
 var vm  = new Vue({
     el: '#app',
     data: {
+        init_content: '获取验证码',
+        timer: 60,
         activityInfo: data.activityInfo,
         templateMap: {
             temp_a: 'temp-a',
             temp_b: 'temp-b',
             temp_c: 'temp-c',
             temp_d: 'temp-d',
-            temp_e: 'temp-e',
+            temp_e: 'temp-e'
         },
         colorMap: {
             page_color_grey: 'grey',
@@ -298,6 +300,13 @@ var vm  = new Vue({
         'temp-c': temp_c,
         'temp-d': temp_d,
         'temp-e': temp_e
+    },
+    methods: {
+        updateTime: function(){
+            setInterval(function(){
+                this.timer--
+            })
+        }
     },
     ready: function(){
         var swiper = new Swiper('.swiper-container-v', {
